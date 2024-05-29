@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <div class="row">
+    <!-- Sol tarafta filtreleme paneli -->
+    <div class="col-lg-3">
+      <app-filter-panel></app-filter-panel>
+    </div>
+
+    <div class="col-lg-9 mt-3">
+      <div class="row">
+        <div class="col-md-6 col-lg-4" *ngFor="let estateItem of estates">
+          <div class="card mb-3" style="min-height: 400px;">
+            <img src="{{estateItem.thumbnail}}" class="card-img-top "  >
+            <div class="card-body">
+              <p class="card-text">{{estateItem.title}}</p>
+              <p class="card-text ">Metrekare : {{estateItem.fieldM2}} M2</p>
+              <hr>
+              <p class="card-text fw-bold">Ücret : {{estateItem.price}} TL  </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
